@@ -1,9 +1,8 @@
-import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
 const Component = ({ data }) => (
   <span>
-    {data.loading? '..' : data.name}
+    Name
   </span>
 )
 
@@ -13,4 +12,4 @@ const query = gql`
   }
 `
 
-export default graphql(query)(Component)
+export default Component

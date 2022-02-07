@@ -1,6 +1,24 @@
 .dataContainer {
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid #C7C8D9;
     margin: 6px;
     font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.subHeader{
+    color:#555770;
+}
+
+.location{
+    color: #000000;
+    font-weight: 500;
 }

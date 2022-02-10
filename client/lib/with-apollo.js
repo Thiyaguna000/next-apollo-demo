@@ -3,7 +3,8 @@ import {
   InMemoryCache
 } from "@apollo/client";
 
+let PORT = process.env.PORT || 8080
   export const client = new ApolloClient({
-    uri: 'http://localhost:8080/graphql',
+    uri: `http://localhost:${PORT}/graphql`,
     cache: new InMemoryCache()
   });

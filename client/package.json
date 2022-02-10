@@ -9,7 +9,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "test": "jest"
+    "test": "jest",
+    "heroku-postbuild": "next run build"
   },
   "license": "MIT",
   "dependencies": {

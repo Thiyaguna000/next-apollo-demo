@@ -3,18 +3,36 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "test": "jest",
+    "cypress": "cypress open"
   },
   "license": "MIT",
   "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "apollo-boost": "^0.4.9",
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
+    "connected-react-router": "^6.9.2",
     "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
+    "history": "^5.2.0",
+    "lodash": "^4.17.21",
     "next": "^12.0.10",
     "next-apollo": "^5.0.8",
     "react": "^17.0.2",
     "react-apollo": "^3.1.5",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.5.1",
+    "cypress": "^9.4.1",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.1",
+    "react-test-renderer": "^17.0.2"
   }
 }

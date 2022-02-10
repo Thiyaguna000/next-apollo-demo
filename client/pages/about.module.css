@@ -16,25 +16,9 @@
     cursor: pointer;
 }
 
-.cardData{
-    margin: 30px auto;
-    width: 200px;
-    height: auto;
-    border-radius: 40px;
-    /* box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22); */
-    cursor: pointer;
-    transition: 0.4s;
-}
-
 .aboutWrapper {
     margin-top: 40px;
 }
-
-.cardData:hover {
-    transform: scale(0.9, 0.9);
-    /* box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-      -5px -5px 30px 15px rgba(0,0,0,0.22); */
-  }
 
   .loader {
     border: 16px solid #f3f3f3; /* Light grey */

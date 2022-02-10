@@ -106,7 +106,7 @@ export default () => {
         </div>
         {
           loading ? <div className={Styles.loader} /> : <div className={Styles.wrapper}>
-          {slicedData.map((item,key) => <Card className={Styles.cardData} data={item} key={key} />)}
+          {slicedData.map((item,key) => <Card data={item} key={key} />)}
           </div>
         }
         {loadMore && <div className={Styles.load} onClick={loadMoreFunc}>Load More...</div>}

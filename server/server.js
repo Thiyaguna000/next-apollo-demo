@@ -4,7 +4,7 @@ import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
 const http = require("http");
 
-
+let PORT = process.env.PORT || 8080
 
 const startServer = async () => {
 
@@ -22,8 +22,8 @@ const startServer = async () => {
     httpServer = http.createServer(app);
 
 
-  httpServer.listen({ port: 8080 }, () => {
-    console.log(`🚀 Server Started! hurrah! in port=> 8080`);
+  httpServer.listen({ port: PORT }, () => {
+    console.log(`🚀 Server Started! hurrah! in port=> ${PORT}`);
   });
 };
 startServer();

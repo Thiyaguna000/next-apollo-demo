@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders card 1`] = `
+<div
+  className="cardData"
+>
+  <h2
+    className="header"
+  />
+  <p
+    className="subHeader"
+  >
+    Location:
+    <span
+      className="location"
+    />
+  </p>
+  <p>
+    Website: 
+    <a
+      target="_blank"
+    />
+  </p>
+</div>
+`;

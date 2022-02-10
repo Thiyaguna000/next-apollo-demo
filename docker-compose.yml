@@ -1,0 +1,21 @@
+version: ''
+services:
+  express-server:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    container_name: client
+    volumes:
+       - ./client:/Users/thiyagun/Documents/publicis/next-apollo-demo/client
+       - /Users/thiyagun/Documents/publicis/next-apollo-demo/client/node_modules
+  nextjs-ui:
+    build:
+      context: ./server
+    ports:
+      - "8080:8080"
+    container_name: express 
+    stdin_open: true
+    volumes:
+       - ./server:/Users/thiyagun/Documents/publicis/next-apollo-demo/server
+       - /Users/thiyagun/Documents/publicis/next-apollo-demo/server/node_modules

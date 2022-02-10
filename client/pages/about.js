@@ -1,44 +1,9 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import Card from '../components/Card/Card';
-import Styles from './about.module.css';
+import Styles from './style.module.css';
 import { client } from '../lib/with-apollo';
 import { GET_API } from '../lib/api';
-
-
-
-const dummyData = [
-  {
-    name: "Random",
-    address: "chennai",
-    email: "diago@mail.com"
-  },
-  {
-    name: "Random2",
-    address: "chennai",
-    email: "diago@mail.com"
-  },
-  {
-    name: "Random3",
-    address: "chennai",
-    email: "diago@mail.com"
-  },
-  {
-    name: "Random4",
-    address: "chennai",
-    email: "diago@mail.com"
-  },
-  {
-    name: "Random5",
-    address: "chennai",
-    email: "diago@mail.com"
-  },
-  {
-    name: "Random6",
-    address: "chennai",
-    email: "diago@mail.com"
-  },
-]
 
 export default () => {
   const [ loadMore, setLoadMore ] = useState(false);
@@ -46,6 +11,7 @@ export default () => {
   const [ slicedData, setSlicedData ] = useState([]);
   const [index, setIndex] = useState(0);
   const [data, setData] = useState([]);
+  const [infiniteLoader, setInfiniteLoader] = useState(false);
 
   useEffect(() => {
    getCompanyList();
@@ -54,7 +20,7 @@ export default () => {
   useEffect(() => {
     if (data.length !== 0 ) {
       funcSlice();
-      setIndex(index+2)
+      setIndex(index+20)
      }
   }, [data])
 
@@ -73,12 +39,15 @@ export default () => {
     };
 
   const loadMoreFunc = () => {
-    if (slicedData.length >= 60) {
+    setInfiniteLoader(true);
+    if (slicedData.length >= 200) {
       setLoadMore(false);
-      console.log(slicedData);
     } else {
-      setIndex(index+2);
-      funcSlice();
+      setTimeout(() => {
+        setInfiniteLoader(false);
+        setIndex(index+20);
+        funcSlice();
+      }, 3000);
     }
   }
 
@@ -101,17 +70,18 @@ export default () => {
   return(
     <>
       <div className={Styles.aboutWrapper}>
+      <Link href="/"><a className={Styles.load}>Go Back</a></Link>
         <div className={Styles.searchWrapper}>
-        <input type='search' className={Styles.searchInput} placeholder='Search' onChange={searchHandler}/>
+          <h1>List of Universities</h1>
+          <input type='search' className={Styles.searchInput} placeholder='Search' onChange={searchHandler}/>
         </div>
         {
-          loading ? <div className={Styles.loader} /> : <div className={Styles.wrapper}>
+          loading ? <div className={Styles.loader} /> : 
+            <div className={Styles.wrapper}>
           {slicedData.map((item,key) => <Card data={item} key={key} />)}
           </div>
         }
-        {loadMore && <div className={Styles.load} onClick={loadMoreFunc}>Load More...</div>}
-        <br/><br/>
-        <Link href="/"><a>Go Back</a></Link>
+        {infiniteLoader ? <div className={Styles.loader} /> : loadMore && <div className={Styles.load} onClick={loadMoreFunc}>Load More...</div>}
       </div>
     </>
   )

@@ -10,7 +10,7 @@ const Page = () => {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet" />
         </Head>
         <div>
-          Welcome, 
+          <h1>Welcome</h1>
           <br/><br/>
           <Link href="/about"><a>About</a></Link>
         </div>

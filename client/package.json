@@ -6,8 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "test": "jest",
-    "cypress": "cypress open"
+    "cypress:open": "cypress open",
+    "test": "jest"
   },
   "license": "MIT",
   "dependencies": {
@@ -30,9 +30,14 @@
   "devDependencies": {
     "@testing-library/react": "^12.1.2",
     "babel-jest": "^27.5.1",
-    "cypress": "^9.4.1",
     "jest": "^27.5.1",
     "nodemon": "^2.0.1",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/user-event": "13.5.0",
+    "@types/react": "17.0.38",
+    "eslint": "8.5.0",
+    "eslint-config-next": "latest",
+    "eslint-plugin-testing-library": "5.0.1"
   }
 }

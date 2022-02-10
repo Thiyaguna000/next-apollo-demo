@@ -1,7 +1,6 @@
 .wrapper{
     display: flex;
-    justify-content: space-around;
-    z-index: 0;
+    /* justify-content: space-around; */
     width: 100%;
     flex-wrap: wrap;
 }
@@ -14,6 +13,8 @@
     text-align: center;
     margin: auto;
     cursor: pointer;
+    text-decoration: none;
+    color: #000000;
 }
 
 .aboutWrapper {
@@ -36,14 +37,13 @@
   }
 
   .searchWrapper{
-    width: 400px;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
   }
 
   .searchInput{
-    width: 100%;
+    width: 350px;
     border: 3px solid #C7C8D9;
     padding: 5px;
     border-radius: 0 5px 5px 0;

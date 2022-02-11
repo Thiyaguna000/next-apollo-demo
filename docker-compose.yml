@@ -1,6 +1,6 @@
 version: ''
 services:
-  express-server:
+  nextjs-ui:
     build:
       context: ./client
     ports:
@@ -9,7 +9,7 @@ services:
     volumes:
        - ./client:/Users/thiyagun/Documents/publicis/next-apollo-demo/client
        - /Users/thiyagun/Documents/publicis/next-apollo-demo/client/node_modules
-  nextjs-ui:
+  express-server:
     build:
       context: ./server
     ports:

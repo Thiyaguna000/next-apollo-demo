@@ -8,7 +8,6 @@ const Page = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet" />
-        <link rel="shortcut icon" type="image/x-icon" href="../static/favicon.ico"></link>
         </Head>
         <div>
           <h1>Welcome</h1>

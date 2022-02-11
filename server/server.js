@@ -22,7 +22,7 @@ const startServer = async () => {
     httpServer = http.createServer(app);
 
 
-  httpServer.listen({ port: PORT }, () => {
+  httpServer.listen({ port: PORT, host: '0.0.0.0' }, () => {
     console.log(`🚀 Server Started! hurrah! in port=> ${PORT}`);
   });
 };

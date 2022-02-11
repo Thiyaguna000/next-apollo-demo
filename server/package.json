@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node index"
+    "start":"node index"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",

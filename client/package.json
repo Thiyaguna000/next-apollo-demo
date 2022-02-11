@@ -6,11 +6,11 @@
     "node": "16.13.2"
     },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start -p $PORT",
-    "test": "jest",
-    "heroku-postbuild": "next run build"
+    "dev":"next",
+    "build":"next build",
+    "start":"next start -p $PORT",
+    "test":"jest",
+    "heroku-postbuild":"next run build"
   },
   "license": "MIT",
   "dependencies": {

@@ -32,3 +32,11 @@
 .cardData:hover {
     transform: scale(0.9, 0.9);
   }
+
+  .webPages{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }

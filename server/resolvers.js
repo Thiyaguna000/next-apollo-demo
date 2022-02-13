@@ -14,11 +14,9 @@ const fetch = require('node-fetch');
               domain: item.domains[0]
             }
           })
-          console.log(res)
           return res;
         })
         .catch(err => console.log(err));
-        console.log(response)
        return response;
       }
     }
